@@ -1,0 +1,72 @@
+{
+  "name": "webpack-template",
+  "version": "1.0.0",
+  "description": "This is my webpack template I use for each project",
+  "homepage": "https://zerdox-x.github.io/interactiveTableOfUsers",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && webpack --mode production --config webpack.config.server.js && cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
+    "dev": "webpack --mode development --config webpack.config.server.js",
+    "start": "node ./dist/server.js"
+  },
+  "keywords": [
+    "webpack",
+    "boilerplate",
+    "starter",
+    "template",
+    "front-end"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZerdoX-x/webpack-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZerdoX-x/webpack-template/issues",
+    "email": "zerdox.cool4@gmail.com"
+  },
+  "author": "zerdox",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
+    "cache-loader": "^4.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.4.2",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.7.2",
+    "eslint-loader": "^3.0.3",
+    "favicons-webpack-plugin": "^1.0.2",
+    "file-loader": "^4.3.0",
+    "gh-pages": "^2.2.0",
+    "html-beautify-webpack-plugin": "^1.0.5",
+    "html-loader": "^0.5.5",
+    "html-minifier-webpack-plugin": "^2.2.3",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "nodemon": "^1.19.4",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.19.1",
+    "style-loader": "^1.1.3",
+    "stylelint": "^11.1.1",
+    "stylelint-order": "^3.1.1",
+    "stylelint-prettier": "^1.1.1",
+    "stylelint-webpack-plugin": "^1.2.1",
+    "svg-sprite-loader": "^4.1.6",
+    "svgo-loader": "^2.2.1",
+    "terser-webpack-plugin": "^2.3.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
