@@ -1,4 +1,9 @@
-import { rowSaveButtonClickHandler } from './row__save';
+import { rowSaveButtonClickHandler } from './save';
+
+const rowEditButtons = document.getElementById('users-table').querySelectorAll('.row__edit');
+for (let button of rowEditButtons) {
+  button.addEventListener('click', rowEditButtonClickHandler, { once: true });
+}
 
 function rowEditButtonClickHandler() {
   const currentRow = this.parentElement.parentElement;
@@ -13,6 +18,7 @@ function rowEditButtonClickHandler() {
 
   // change the button
   this.innerHTML = 'Save';
+  this.title = 'Save';
   this.classList.add('row__save');
   this.addEventListener(
     'click',
@@ -24,7 +30,7 @@ function rowEditButtonClickHandler() {
 
 function createEditableValue(element, classList) {
   const editableValue = document.createElement('input');
-  editableValue.value = element.innerHTML;
+  editableValue.value = element.innerHTML.trim();
   editableValue.required = true;
   editableValue.classList = classList;
 

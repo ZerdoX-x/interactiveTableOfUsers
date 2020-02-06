@@ -1,20 +1,33 @@
 <h1 class="page__header">Native js demo</h1>
 <hr>
-<table class="users-table">
+<table class="users-table" id="users-table">
   <caption class="users-table__caption">Table of users</caption>
   <tbody class="users-table__body" id="users-table__body">
     <tr class="users-table__headings">
       <th class="users-table__heading">Name</th>
       <th class="users-table__heading">Phone</th>
     </tr>
+    <tr class="users-table__row row">
+      <td class="row__name">Vladimir Porotnikov</td>
+      <td class="row__tel">+7(932)-481-39-41</td>
+      <td><button class="row__edit" title="Edit">Edit</button></td>
+      <td><button class="row__remove" title="Remove">Remove</button></td>
+    </tr>
   </tbody>
 </table>
-<form class="form" id="form">
-  <input type="text" name="" class="form__name-input" id="form__user-name"
-         minlength="6" max="128" required placeholder="Name and Surname">
-  <input type="tel" name="" class="form__tel-input" id="form__user-tel"
-         minlength="11" max="16" required placeholder="Phone Number">
-  <button type="submit" class="form_submit-btn" id="form__submit">
+<form action="/" class="form" id="form">
+  <label>
+    <span>Name</span>
+    <input type="text" name="" class="form__name-input" id="form__user-name"
+           minlength="5" max="128" required placeholder="First name Second name">
+  </label>
+  <label>
+    <span>Phone</span>
+    <input type="tel" name="" class="form__tel-input" id="form__user-tel"
+           minlength="10" max="16" required placeholder="User's phone number">
+  </label>
+  <button type="submit" class="form_submit-btn" id="form__submit" title="Add User">
     Add user
   </button>
+  <div class="form__error" id="form__error"></div>
 </form>
